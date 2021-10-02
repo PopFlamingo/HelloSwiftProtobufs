@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Bar {
+    string fieldX = 1 [json_name="Field_X"];;
+    bool fieldY = 2;
+    double fieldZ = 3;
+    Id id = 4;
+}
+
+message Id {
+    oneof id {
+        string a = 4;
+        string b = 5;
+        string c = 6;
+        int64 d = 7;
+    }
+}
